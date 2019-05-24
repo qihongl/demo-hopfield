@@ -4,10 +4,11 @@
 
 Here's the hopfield network trying to recall the the image "9", given a noisy version of "9": 
 
-<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/figs/pc.png">
+<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/figs/pc.png" width='900'>
 
 Here're the training patterns: 
-<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/figs/train.png">
+
+<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/figs/train.png" width='600'>
 
 #### References: 
 
