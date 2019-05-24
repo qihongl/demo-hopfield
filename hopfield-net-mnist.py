@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from torchvision.datasets import MNIST
 from torchvision import transforms
 
-seed_val = 0
+seed_val = 1
 np.random.seed(seed_val)
 torch.manual_seed(seed_val)
 
@@ -25,13 +25,6 @@ def get_imgs(n_imgs):
     batch_idx, (X_, Y_) = next(examples)
     X = np.squeeze(X_.data.numpy())
     return X.reshape(n_imgs, -1)
-
-
-def show_letter(pattern):
-    f, ax = plt.subplots(1, 1, figsize=(4, 4))
-    ax.imshow(pattern.reshape(side_len, side_len), cmap='bone_r')
-    ax.set_axis_off()
-    f.tight_layout()
 
 
 def pattern_complete(weights, X, n_iter=10, soft=True):
@@ -63,14 +56,14 @@ n_imgs = 2
 
 X = get_imgs(n_imgs)
 m, n_units = np.shape(X)
-show_letter(X[0])
-f, axes = plt.subplots(1, n_imgs, figsize=(n_iter*3, 3))
+
+f, axes = plt.subplots(1, n_imgs, figsize=(n_imgs*3, 3))
 for i in range(n_imgs):
     axes[i].imshow(X[i].reshape(side_len, side_len), cmap='bone_r')
     axes[i].set_axis_off()
 f.suptitle('training patterns')
 f.tight_layout()
-f.savefig('train.png', dpi=100, bbox_inches='tight')
+f.savefig('figs/train.png', dpi=100, bbox_inches='tight')
 
 # memorize the patterns
 weights = np.zeros((n_units, n_units))
@@ -96,4 +89,4 @@ for i in range(n_iter+1):
     axes[i].set_axis_off()
     axes[i].set_title(f'pattern completion, iter: {i}')
 f.tight_layout()
-f.savefig('pc.png', dpi=100, bbox_inches='tight')
+f.savefig('figs/pc.png', dpi=100, bbox_inches='tight')
