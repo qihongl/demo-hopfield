@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+np.random.seed(0)
 
 
 def sigmoid(x):
@@ -65,11 +66,11 @@ for x in X:
 weights[np.diag_indices(n_units)] = 0
 
 # show the test pattern again
-x_test = Z
+x_test = A
 show_letter(x_test)
 
 # add noise
-noise_level = .4
+noise_level = .3
 x_test = add_noise(x_test, noise_level=noise_level)
 show_letter(x_test)
 
@@ -78,8 +79,9 @@ n_iter = 3
 x_hats = pattern_complete(weights, x_test, n_iter=n_iter)
 # show_letter(x_hats[-1])
 
-f, axes = plt.subplots(n_iter, 1, figsize=(4, n_iter*4))
-for i, ax in enumerate(axes):
+f, axes = plt.subplots(n_iter+1, 1, figsize=(3, (n_iter+1)*3))
+x_hats.insert(0, x_test)
+for i in range(n_iter+1):
     axes[i].imshow(x_hats[i].reshape(side_len, side_len), cmap='bone_r')
     axes[i].set_axis_off()
     axes[i].set_title(f'pattern completion, iter: {i}')
