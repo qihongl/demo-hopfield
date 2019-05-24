@@ -86,3 +86,4 @@ for i in range(n_iter+1):
     axes[i].set_axis_off()
     axes[i].set_title(f'pattern completion, iter: {i}')
 f.tight_layout()
+f.savefig('pc.png', dpi=100, bbox_inches='tight')
