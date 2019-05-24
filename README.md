@@ -1,8 +1,13 @@
-# demo-hopfield
+# demo-hopfield-network
+
+<a href="https://colab.research.google.com/github/qihongl/demo-hopfield-network/blob/master/hopfield-net.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a>
+
+Here's the hopfield network trying to recall the letter "A", given a noisy version of "A": 
+
+<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/pc.png" width="170">
 
 
-
-References: 
+#### References: 
 
 [1] <a href="http://codeaffectionate.blogspot.com/2013/05/fun-with-hopfield-and-numpy.html">Fun with Hopfield and Numpy</a>
 
