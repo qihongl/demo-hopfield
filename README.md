@@ -2,10 +2,12 @@
 
 <a href="https://colab.research.google.com/github/qihongl/demo-hopfield-network/blob/master/hopfield-net.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab" title="Open and Execute in Google Colaboratory"></a>
 
-Here's the hopfield network trying to recall the letter "A", given a noisy version of "A": 
+Here's the hopfield network trying to recall the the image "9", given a noisy version of "9": 
 
-<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/pc.png">
+<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/figs/pc.png">
 
+Here're the training patterns: 
+<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/figs/train.png">
 
 #### References: 
 
