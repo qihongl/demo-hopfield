@@ -4,7 +4,7 @@
 
 Here's the hopfield network trying to recall the letter "A", given a noisy version of "A": 
 
-<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/pc.png" width="170">
+<img src="https://github.com/qihongl/demo-hopfield-network/blob/master/pc.png">
 
 
 #### References: 
