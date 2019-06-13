@@ -3,10 +3,6 @@ import matplotlib.pyplot as plt
 np.random.seed(0)
 
 
-def sigmoid(x):
-    return 1/(1+np.exp(-x))
-
-
 def show_letter(pattern):
     f, ax = plt.subplots(1, 1, figsize=(4, 4))
     ax.imshow(pattern.reshape(side_len, side_len), cmap='bone_r')
@@ -19,7 +15,7 @@ def pattern_complete(weights, X, n_iter=10, soft=True):
     for i in range(n_iter):
         X = np.dot(X, weights)
         if soft:
-            X = sigmoid(X)
+            X = np.tanh(X)
         else:
             X[x < 0] = -1
             X[x >= 0] = 1
@@ -70,12 +66,12 @@ x_test = A
 show_letter(x_test)
 
 # add noise
-noise_level = .3
+noise_level = .25
 x_test = add_noise(x_test, noise_level=noise_level)
 show_letter(x_test)
 
 # pattern completion
-n_iter = 3
+n_iter = 2
 x_hats = pattern_complete(weights, x_test, n_iter=n_iter)
 # show_letter(x_hats[-1])
 
